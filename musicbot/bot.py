@@ -221,8 +221,8 @@ class MusicBot(discord.Client):
         return not sum(1 for m in vchannel.voice_members if check(m))
 
 
-    async def _join_startup_channels(self, channels, *, auto
-                                     =True):
+    async def _join_startup_channels(self, channels, *, autosummon=True):
+        
         joined_servers = set()
         channel_map = {c.server: c for c in channels}
 
