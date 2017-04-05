@@ -1,0 +1,14 @@
+[Unit]
+Description=MusicBot
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+User=pi
+Group=pi
+Restart=on-failure
+RestartSec=30
+ExecStart=/home/pi/MusicBot/runbot_linux.sh
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
